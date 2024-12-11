@@ -172,14 +172,4 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ---
 
-## 📧 **Contact**
-
-For any questions or suggestions, feel free to reach out:
-
-- **Name**: Gargi Chakraborty  
-- **Email**: [your.email@example.com]  
-- **LinkedIn**: [Your LinkedIn Profile](https://www.linkedin.com/in/yourprofile)  
-
----
-
 Happy Optimizing! 🚀📊
