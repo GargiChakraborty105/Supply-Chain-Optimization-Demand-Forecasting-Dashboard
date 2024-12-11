@@ -33,12 +33,16 @@ The **Supply Chain Optimization & Demand Forecasting Dashboard** is a powerful i
 Supply-Chain-Optimization-Demand-Forecasting-Dashboard/
 │-- supply_chain.py
 │-- supply_chain_sample_data.csv
+│-- data.py
+│-- supply_chain_updated_data.csv
 │-- README.md
 └-- requirements.txt
 ```
 
 - **`supply_chain.py`**: Main Python script that runs the Streamlit dashboard.
 - **`supply_chain_sample_data.csv`**: Sample dataset used for the dashboard.
+- **`data.py`**: to edit the columns in the dataset used for the dashboard.
+- **`supply_chain_updated_data.csv`**: updated dataset used for the dashboard.
 - **`README.md`**: Documentation for the project.
 - **`requirements.txt`**: List of dependencies for the project.
 
@@ -156,14 +160,6 @@ Install them using:
 ```bash
 pip install streamlit pandas numpy plotly
 ```
-
-Or with the `requirements.txt` file:
-
-```bash
-pip install -r requirements.txt
-```
-
----
 
 ## 🤝 **Contributing**
 
