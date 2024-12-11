@@ -1,0 +1,64 @@
+How to Use the Inputs in the Supply Chain Optimization & Demand Forecasting Dashboard
+1. Product Selection
+Input: Product_ID
+This dropdown lets you select a specific product from the dataset.
+Each product will have unique demand forecasts, inventory levels, supply chain disruptions, and "what-if" scenarios based on its historical data.
+2. Forecast Period
+Input: forecast_days
+A slider to select how many days ahead you want to forecast demand (between 7 and 30 days).
+The forecast model predicts future demand using a 7-day moving average and adds variability for each future date.
+3. Inventory Recommendations
+Inputs:
+Inventory_Level: Current inventory level for the selected product.
+
+Reorder_Threshold: Minimum inventory level before a reorder is recommended.
+
+Logic:
+
+If Inventory_Level < Reorder_Threshold: A warning message is displayed to recommend restocking.
+Otherwise, a success message is shown indicating inventory is sufficient.
+4. Supply Chain Disruptions
+Inputs:
+Lead_Time: The estimated time (in days) for suppliers to deliver new stock.
+
+Supplier_Reliability: Percentage representing the supplier's reliability.
+
+Logic:
+
+Higher Lead_Time and lower Supplier_Reliability increase the risk of disruptions.
+The dashboard can highlight potential delays based on these values, helping plan alternative suppliers or buffer stocks.
+5. What-If Scenario Analysis
+Inputs:
+forecast_days, Inventory_Level, Lead_Time, and Supplier_Reliability.
+
+Usage:
+
+Simulate real-time scenarios by adjusting these inputs to see how forecasts, inventory needs, and potential disruptions change.
+For example:
+Increase Lead_Time to see how delays affect inventory recommendations.
+Decrease Supplier_Reliability to understand disruption risks.
+How to Integrate and Run the Dashboard
+Data Preparation:
+
+Ensure the dataset (supply_chain_updated_data.csv) includes the following columns:
+Date
+Product_ID
+Units_Sold
+Sales_Price
+Inventory_Level
+Reorder_Threshold
+Lead_Time
+Supplier_Reliability
+
+
+Run the Streamlit App:
+
+In your terminal or command prompt, navigate to the project directory.
+Run the following command:
+
+streamlit run supply_chain.py
+
+Interact with the Dashboard:
+
+Use the sidebar to select different products and forecast periods.
+Review demand forecasts, inventory recommendations, potential disruptions, and real-time scenario analysis.

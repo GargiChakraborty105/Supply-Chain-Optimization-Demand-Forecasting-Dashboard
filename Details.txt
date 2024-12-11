@@ -1,0 +1,99 @@
+Project: Supply Chain Optimization & Demand Forecasting Dashboard
+Objective
+To build an interactive dashboard that helps in optimizing supply chain processes and forecasting product demand, with features to predict potential disruptions and provide real-time "what-if" scenario analysis. This dashboard can assist businesses in making informed decisions regarding inventory management, supplier reliability, and demand planning.
+
+Key Features
+Demand Forecasting
+
+Purpose: Predict future demand based on historical data.
+Method:
+Uses a 7-day moving average for simple forecasting.
+Predicts demand for a specified period (7-30 days) with confidence intervals.
+Visualizes historical and forecasted demand using Plotly interactive charts.
+Inputs:
+Product_ID: Select a product to view its demand forecast.
+forecast_days: Number of days to forecast ahead.
+Inventory Recommendations
+
+Purpose: Provide automated recommendations on whether to restock based on current inventory levels.
+Logic:
+If Inventory_Level is below Reorder_Threshold, a warning is issued to restock.
+If inventory is sufficient, a success message is displayed.
+Inputs:
+Inventory_Level: Current inventory for the selected product.
+Reorder_Threshold: Minimum stock level that triggers a restock recommendation.
+Potential Supply Chain Disruptions
+
+Purpose: Highlight potential risks in the supply chain based on supplier reliability and lead time.
+Logic:
+Long Lead_Time and low Supplier_Reliability indicate higher disruption risks.
+Provides product-specific disruption warnings.
+Inputs:
+Lead_Time: Estimated delivery time (in days).
+Supplier_Reliability: Supplier’s reliability percentage (e.g., 70%-99%).
+Real-Time What-If Scenario Analysis
+
+Purpose: Simulate different supply chain scenarios to observe their impact in real time.
+Functionality:
+Adjust inputs like Lead_Time, Supplier_Reliability, and forecast_days to see how forecasts and recommendations change dynamically.
+Use Cases:
+Assess the impact of supplier delays on inventory levels.
+Understand the effect of increased or decreased reliability on disruption risks.
+Interactive Data Visualization
+
+Tools: Plotly for dynamic charts and Streamlit for the interface.
+Visuals:
+Historical demand charts with forecast overlays.
+Alerts and messages for inventory and disruptions.
+Dataset Details
+The dataset used in the project contains the following columns:
+
+Column Name	Description
+Date	Date of the sales record
+Product_ID	Unique identifier for the product
+Units_Sold	Number of units sold on the given date
+Sales_Price	Price per unit of the product
+Inventory_Level	Current inventory level for the product
+Reorder_Threshold	Minimum inventory level before a restock is needed
+Lead_Time	Estimated delivery time (in days)
+Supplier_Reliability	Supplier’s reliability percentage (70%-99%)
+Steps to Run the Project
+Set Up the Environment
+
+Install dependencies using pip:
+
+pip install streamlit pandas numpy plotly
+
+Prepare the Dataset
+
+Ensure you have the updated dataset (supply_chain_updated_data.csv) with all required columns.
+Run the Streamlit App
+
+Navigate to the project directory in your terminal.
+Execute the following command:
+
+streamlit run supply_chain.py
+
+Interact with the Dashboard
+
+Use the sidebar to:
+Select a Product.
+Choose Forecast Period (7-30 days).
+View:
+Demand Forecast Charts.
+Inventory Recommendations.
+Disruption Warnings.
+What-If Scenario Analysis.
+Enhancements & Customizations
+Additional Dashboard Elements:
+
+Cost Analysis: Calculate total inventory holding costs.
+Supplier Performance Charts: Visualize supplier performance over time.
+Order Lead Time Trends: Track changes in delivery times.
+Advanced Forecasting Models:
+
+Implement models like ARIMA, Prophet, or LSTM for more accurate demand predictions.
+Real-Time Data Integration:
+
+Connect with live databases or APIs for real-time supply chain data updates.
+This solution offers a comprehensive and customizable tool for supply chain management, helping businesses optimize inventory, anticipate disruptions, and simulate various operational scenarios efficiently.
