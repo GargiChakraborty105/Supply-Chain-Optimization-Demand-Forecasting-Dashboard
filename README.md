@@ -36,7 +36,6 @@ Supply-Chain-Optimization-Demand-Forecasting-Dashboard/
 │-- data.py
 │-- supply_chain_updated_data.csv
 │-- README.md
-└-- requirements.txt
 ```
 
 - **`supply_chain.py`**: Main Python script that runs the Streamlit dashboard.
@@ -44,7 +43,6 @@ Supply-Chain-Optimization-Demand-Forecasting-Dashboard/
 - **`data.py`**: to edit the columns in the dataset used for the dashboard.
 - **`supply_chain_updated_data.csv`**: updated dataset used for the dashboard.
 - **`README.md`**: Documentation for the project.
-- **`requirements.txt`**: List of dependencies for the project.
 
 ---
 
