@@ -62,17 +62,12 @@ Follow these steps to set up and run the project on your local machine:
    source venv/bin/activate          # On Windows: venv\Scripts\activate
    ```
 
-3. **Install Dependencies**  
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-4. **Run the Streamlit App**  
+3. **Run the Streamlit App**  
    ```bash
    streamlit run supply_chain.py
    ```
 
-5. **Open in Browser**  
+4. **Open in Browser**  
    The app will launch in your default browser at:  
    ```
    http://localhost:8501
